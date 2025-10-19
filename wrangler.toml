@@ -1,14 +1,20 @@
 name = "sub-store-workers"
 compatibility_date = "2023-07-19"
 main = "src/index.ts"
-compatibility_flags = [ "nodejs_compat" ]
+compatibility_flags = ["nodejs_compat"]
 minify = true
 
 [[d1_databases]]
 binding = "DB"
-database_name = "substore_workers_database_name"
-database_id = "substore_workers_database_id"
+database_name = "sub-store"
+database_id = "66c6a0f4-b31a-41c5-9672-509bf75a2aa9"
+
 
 [vars]
-BEARER_TOKEN = "substore_workers_bearer_token"
+# BEARER_TOKEN = "substore_workers_bearer_token"
 D_TOKEN = "substore_workers_d_token"
+
+
+[observability]
+enabled = true
+head_sampling_rate = 1 # optional. default = 1.
